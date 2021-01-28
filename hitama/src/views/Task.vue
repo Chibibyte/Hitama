@@ -37,7 +37,7 @@
 
     <DocEntry>
       <v-row width="100%">
-        <v-col cols="3" height="100%">
+        <v-col :cols="edit ? '3' : '4'" height="100%">
           <DocEntry dark height="100%" spaceBetween>
             <!-- ############################   ICON   ############################-->
             <DocEntry title="Icon" row centerTitle :color="editColor">
@@ -89,12 +89,11 @@
 
         <v-col v-if="!edit"></v-col>
 
-        <v-col cols="3">
+        <v-col :cols="edit ? '3' : '4'">
           <DocEntry dark height="100%" spaceBetween>
             <!-- ############################   OWNER   ############################-->
             <DocEntry
               title="Owner"
-              row
               spaceBetween
               :color="editColor"
               @click.native="
@@ -109,10 +108,10 @@
               <User light :userId="task.owner" />
             </DocEntry>
             <!-- ############################   DATES   ############################-->
-            <DocEntry title="Creation" row spaceBetween>
+            <DocEntry title="Creation" spaceBetween>
               <DateBlock v-model="task.createdAt" />
             </DocEntry>
-            <DocEntry title="Last Update" row spaceBetween>
+            <DocEntry title="Last Update" spaceBetween>
               <DateBlock v-model="task.updatedAt" />
             </DocEntry>
           </DocEntry>
