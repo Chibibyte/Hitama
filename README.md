@@ -21,7 +21,7 @@ By creating a task you automatically become its owner. You can add users to the 
 
 #### Access
 
-Regarding a task the users a separated into owner, group, user and other.
+Regarding a task the users are separated into owner, group, user and other.
 
 **Owner:** Owns the task. Full access.
 **Group:** Member of a tasks group. Can read the task and create subtasks.
